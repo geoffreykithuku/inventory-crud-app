@@ -11,18 +11,9 @@ const Category = () => {
     }
 
   return (
-    <div className="bg-white w-full h-auto rounded px-20 mt-3 ">
-      <div className="flex items-center justify-center gap-10 pt-5">
-        <input
-          type="search"
-          placeholder="search"
-          className="text-blue-400 border px-4 py-1 rounded outline-none"
-        />
-        <button className="bg-blue-400 text-white px-3 py-1 rounded">
-          Search
-        </button>
-      </div>
-      <div className="mt-3 w-full p-5">
+    <div className="bg-white w-full h-auto rounded md:px-20 mt-3 ">
+      
+      <div className="mt-8 w-full p-5">
         <table className="table-auto border-spacing-1 w-full ">
           <thead className="bg-blue-400 text-white">
             <tr>
