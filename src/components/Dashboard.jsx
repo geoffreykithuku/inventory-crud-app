@@ -3,9 +3,12 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Trash2, Pencil } from "lucide-react";
 import { InventoryContext } from "../context/context";
+
 const Dashboard = () => {
+  //initialize products using context
   const { products, setProducts, category, resetProducts } =
     useContext(InventoryContext);
+
   const [search, setSearch] = useState("");
 
   // filter category using category id on products
@@ -14,6 +17,7 @@ const Dashboard = () => {
     return productCategory.name;
   };
 
+  //handle search
   const handleSearch = (e) => {
     setSearch(e.target.value);
     if (search.length === 0) {
@@ -27,15 +31,15 @@ const Dashboard = () => {
     }
   };
 
-  //reset products table
   const handleReset = () => {
     setSearch("");
+    //reset products and categories table
     resetProducts();
   };
-    const handleDelete = (id) => {
-        const newProducts = products.filter((product) => product.id !== id);
-        setProducts(newProducts);
-    }
+  const handleDelete = (id) => {
+    const newProducts = products.filter((product) => product.id !== id);
+    setProducts(newProducts);
+  };
 
   return (
     <div className="bg-white w-full h-auto rounded px-20 mt-3 ">
@@ -78,7 +82,7 @@ const Dashboard = () => {
                   <Link to={`edit-item/${product.id}`}>
                     <Pencil size={20} color="#9370f5" />
                   </Link>
-                  <button onClick={()=>handleDelete(product.id)}>
+                  <button onClick={() => handleDelete(product.id)}>
                     <Trash2 size={20} color="#b5306a" />
                   </button>
                 </td>

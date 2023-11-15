@@ -1,42 +1,48 @@
 import React, { useContext, useState } from "react";
 import { InventoryContext } from "../context/context";
 import { useParams, useNavigate } from "react-router";
+
 const EditItem = () => {
   const { id } = useParams();
-    const navigate = useNavigate();
-    
+  const navigate = useNavigate();
+
+  //initialize products using context
   const { products, setProducts, category } = useContext(InventoryContext);
 
+  //filter product to edit from products
   const productToEdit = products.find((product) => product.id === parseInt(id));
 
+  //form data
   const [name, setName] = useState(productToEdit.name);
   const [quantity, setQuantity] = useState(productToEdit.quantity);
   const [price, setPrice] = useState(productToEdit.price);
-    const [category_id, setCategory_id] = useState(productToEdit.category_id);
-    
+  const [category_id, setCategory_id] = useState(productToEdit.category_id);
 
-    //handle submit
+  //handle submit
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const newProducts = products.map((product) => {
-            if (product.id === parseInt(id)) {
-                return {
-                    ...product,
-                    name,
-                    quantity,
-                    price,
-                    category_id,
-                };
-            }
-            return product;
-        });
-        setProducts(newProducts);
-        navigate('/');
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newProducts = products.map((product) => {
+      if (product.id === parseInt(id)) {
+        return {
+          ...product,
+          name,
+          quantity,
+          price,
+          category_id,
+        };
+      }
+      return product;
+    });
+    setProducts(newProducts);
+    navigate("/");
+  };
   return (
     <div className="bg-white  rounded px-10 mt-10 w-fit mx-auto">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5 mx-auto w-full max-w-[400px] py-8 text-blue-400">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-5 mx-auto w-full max-w-[400px] py-8 text-blue-400"
+      >
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}

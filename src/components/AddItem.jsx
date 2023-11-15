@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { InventoryContext } from "../context/context";
 import { useNavigate } from "react-router";
+
 const AddItem = () => {
   const navigate = useNavigate();
 
@@ -43,6 +44,7 @@ const AddItem = () => {
           type="text"
           placeholder="Product name"
           className="bg-blue-400 bg-opacity-10 px-4 py-2 rounded outline-none"
+          required
         />
         <input
           value={quantity}
@@ -50,6 +52,7 @@ const AddItem = () => {
           type="text"
           placeholder="Quantity"
           className="bg-blue-400 bg-opacity-10 px-4 py-2 rounded outline-none"
+          required
         />
         <input
           onChange={(e) => setPrice(e.target.value)}
@@ -57,6 +60,7 @@ const AddItem = () => {
           type="number"
           placeholder="Price"
           className="bg-blue-400 bg-opacity-10 px-4 py-2 rounded outline-none"
+          required
         />
         <select
           value={category_id}
@@ -64,7 +68,9 @@ const AddItem = () => {
           name="category"
           id="category"
           className="bg-blue-400 bg-opacity-10 px-4 py-2 rounded outline-none"
+          required
         >
+          <option value="">Select category</option>
           {category.map((cat) => (
             <option value={cat.id} key={cat.id}>
               {cat.name}
