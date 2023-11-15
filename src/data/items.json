@@ -30,5 +30,29 @@
     "price": 899.99,
     "quantity": 30,
     "category_id": 4
+  },
+  {
+    "id": 5,
+    "name": "Wireless Headphones",
+    "description": "Comfortable wireless headphones with noise cancellation",
+    "price": 129.99,
+    "quantity": 25,
+    "category_id": 1
+  },
+  {
+    "id": 6,
+    "name": "Gaming Laptop",
+    "description": "High-performance gaming laptop with RGB lighting",
+    "price": 1999.99,
+    "quantity": 12,
+    "category_id": 2
+  },
+  {
+    "id": 7,
+    "name": "Curved Gaming Monitor",
+    "description": "Immersive curved monitor for gaming enthusiasts",
+    "price": 699.99,
+    "quantity": 18,
+    "category_id": 3
   }
 ]

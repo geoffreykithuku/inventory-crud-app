@@ -1,7 +1,7 @@
 
 ## Inventory CRUD App
 
-![Inventory CRUD App](./public/inventory-crud-app.png)
+![Inventory CRUD App](./public/inventory.png)
 
 
 ## Description
