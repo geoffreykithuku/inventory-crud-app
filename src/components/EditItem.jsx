@@ -1,6 +1,10 @@
 import React from "react";
-
+import { useParams } from "react-router";
 const EditItem = () => {
+
+    const { id } = useParams()
+
+    
   return (
     <div className="bg-white  rounded px-10 mt-10 w-fit mx-auto">
       <form className="flex flex-col gap-5 mx-auto w-full max-w-[400px] py-8 text-blue-400">
