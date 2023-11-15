@@ -9,9 +9,10 @@ export const InventoryProvider = ({ children }) => {
   const [category, setCategory] = useState(categories);
 
     const resetProducts = () => {
+        setCategory(categories);
          setProducts(items);
     }
-    
+
   return (
     <InventoryContext.Provider
       value={{ resetProducts, category, setCategory, products, setProducts }}
