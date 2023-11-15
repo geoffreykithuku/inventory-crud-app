@@ -1,0 +1,22 @@
+ [
+    {
+      "id": 1,
+      "name": "Sound Systems",
+      "description": "Audio devices and sound systems"
+    },
+    {
+      "id": 2,
+      "name": "Laptops",
+      "description": "Portable computing devices"
+    },
+    {
+      "id": 3,
+      "name": "TVs",
+      "description": "Television sets and accessories"
+    },
+    {
+      "id": 4,
+      "name": "Smartphones",
+      "description": "Mobile phones with advanced features"
+    }
+  ]

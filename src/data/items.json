@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Soundbar",
+    "description": "High-quality soundbar for immersive audio",
+    "price": 299.99,
+    "quantity": 20,
+    "category_id": 1
+  },
+  {
+    "id": 2,
+    "name": "UltraBook Pro",
+    "description": "Powerful and sleek ultrabook for professionals",
+    "price": 1499.99,
+    "quantity": 15,
+    "category_id": 2
+  },
+  {
+    "id": 3,
+    "name": "4K Smart TV",
+    "description": "Large-screen smart TV with 4K resolution",
+    "price": 799.99,
+    "quantity": 10,
+    "category_id": 3
+  },
+  {
+    "id": 4,
+    "name": "Flagship Smartphone",
+    "description": "Top-of-the-line smartphone with cutting-edge features",
+    "price": 899.99,
+    "quantity": 30,
+    "category_id": 4
+  }
+]
