@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import { InventoryContext } from "../context/context";
 import { Trash2, Pencil } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Category = () => {
-    //initialize products using context
+  //initialize products using context
   const { products, setProducts, setCategory, category } =
-      useContext(InventoryContext);
-    
+    useContext(InventoryContext);
+
   // calculate number of products in a category
   const calculateNumberOfProducts = (id) => {
     const numberOfProducts = products.filter(
@@ -48,9 +49,9 @@ const Category = () => {
                 <td>{calculateNumberOfProducts(cat.id)}</td>
 
                 <td className="flex gap-4 items-center justify-center">
-                  <button>
+                  <Link to={`/edit-category/${cat.id}`}>
                     <Pencil size={20} color="#9370f5" />
-                  </button>
+                  </Link>
                   <button onClick={() => handleDelete(cat.id)}>
                     <Trash2 size={20} color="#b5306a" />
                   </button>
