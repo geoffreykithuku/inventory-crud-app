@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import items from "../data/items.json";
+
 import { Link } from "react-router-dom";
 import { Trash2, Pencil } from "lucide-react";
 import { InventoryContext } from "../context/context";
